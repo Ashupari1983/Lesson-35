@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap');
         body {
             background-color: #0a0f1a;
             color: white;
@@ -52,6 +53,26 @@
         .flip-horizontal {
             transform: scaleX(-1);
         }
+        .card {
+  background-color: #0a0f1a;
+  color: #e0e0e0;
+  border: 1px solid #444; /* slightly lighter than bg */
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* 5. Card titles more prominent */
+.card-title {
+  font-weight: 600;     /* semi‑bold */
+  font-size: 1.1rem;    /* slightly larger */
+  color: #ffffff;       /* bright white */
+}
+
+/* 6. Card text */
+.card-text {
+  font-weight: 400;     /* regular */
+  font-size: 0.8rem;
+  color: #cccccc;       /* light grey for contrast */
+}
     </style>
 </head>
 
@@ -83,7 +104,85 @@
             </div>
         </div>
     </nav>
-Missions
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    
+            <!-- Apollo 11 -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border border-secondary">
+                    <img src="0_Unseen-Apollo-11-photographs.webp" class="card-img-top" alt="Apollo 11 Moon Landing" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Apollo 11</h5>
+                        <p class="card-text">NASA’s legendary 1969 mission that landed humans on the Moon for the first
+                            time.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Voyager 1 -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border border-secondary">
+                    <img src="Voyager_spacecraft.jpg" class="card-img-top" alt="Apollo 11 Moon Landing" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Voyager 1</h5>
+                        <p class="card-text">Launched in 1977, Voyager 1 is the farthest human-made object, now in
+                            interstellar space.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Curiosity Rover -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border border-secondary">
+                    <img src="Mars-Curiosity-Rover-scaled.jpg" class="card-img-top" alt="Apollo 11 Moon Landing" height="300" >
+                    <div class="card-body">
+                        <h5 class="card-title">Curiosity Rover</h5>
+                        <p class="card-text">A Mars rover exploring the planet’s surface since 2011 to study its climate and
+                            geology.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Rosetta -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border border-secondary">
+                    <img src="rosetta-images-65.jpg" class="card-img-top" alt="Apollo 11 Moon Landing" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosetta</h5>
+                        <p class="card-text">ESA’s 2004 mission that orbited and landed on Comet 67P, a first in human
+                            history.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Chandrayaan-3 -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border border-secondary">
+                    <img src="chandrayaan.jpg" class="card-img-top" alt="Apollo 11 Moon Landing"
+                    height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Chandrayaan-3</h5>
+                        <p class="card-text">India’s successful 2023 lunar mission that soft-landed near the Moon's south
+                            pole.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tianwen-1 -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border border-secondary">
+                    <img src="6788441.jpg" class="card-img-top" alt="Apollo 11 Moon Landing" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">Tianwen-1</h5>
+                        <p class="card-text">China’s ambitious 2020 Mars mission with an orbiter, lander, and the Zhurong
+                            rover.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
