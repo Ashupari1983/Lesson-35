@@ -11,13 +11,46 @@
 
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
-        body {
+                
+                html {
+  overflow-y: scroll;
+}
+
+                body {
             background-color: #0a0f1a;
             color: white;
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family:'Red Hat Display', sans-serif;
         }
+        /* Reduce navbar height and spacing */
+.navbar {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+/* Make brand (SpaceVerse) smaller if needed */
+.navbar-brand {
+  font-size: 1.1rem !important;
+  padding: 0;
+}
+
+/* Make nav tab names smaller and tighter */
+.nav-link {
+  font-size: 0.7rem !important;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-weight: 400;
+}
+
+        .navbar,
+.navbar-brand,
+.nav-link {
+  font-family: 'Red Hat Display', sans-serif;
+}
+        
 
         .navbar {
             background-color: #0a0f1a;
@@ -86,8 +119,172 @@
             </div>
         </div>
     </nav>
-Planets
+    <!-- Font and Grid Setup -->
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+    .planet-card {
+    background: linear-gradient(145deg, rgba(128, 0, 128, 0.25), rgba(0, 0, 0, 0.5), rgba(0, 0, 255, 0.25));
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+
+    backdrop-filter: blur(4px); /* Optional: adds a glassy effect */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .planet-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(180, 100, 255, 0.4);
+    }
+    .planet-card img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  max-width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+
+  /* ✅ Rounded corners and border */
+  border-radius: 12px;
+  border: 2px solid #ffffffd2;
+  box-shadow: 0 0 8px #fefefe9c;
+
+  /* ✅ Prevent overflow */
+  box-sizing: border-box;
+}
+
+
+
+    
+    .planet-card h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    }
+    
+    .planet-card p {
+    font-size: 0.85rem;
+    color: #dddddd;
+    margin: 0;
+    line-height: 1.4;
+    }
+    .footer{
+            background-color: #0a0f1a;
+            font-family: 'Red Hat Display';
+            text-align: center;
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 2px;
+            color:#ffffff;
+        }
+    </style>  
+    
+    <!-- Cards -->
+    <div class="container-fluid px-5 my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    
+            <!-- Mercury -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/580px-Mercury_in_true_color.jpg"
+                        alt="Mercury from MESSENGER">
+
+
+
+                        alt="Mercury">
+                    <h5>Mercury</h5>
+                    <p>The smallest and closest planet to the Sun, with no atmosphere and wild temperature shifts.</p>
+                </div>
+            </div>
+    
+            <!-- Venus -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus">
+                    <h5>Venus</h5>
+                    <p>Hot and hostile, Venus has thick clouds of CO₂ and sulfuric acid with crushing pressure.</p>
+                </div>
+            </div>
+    
+            <!-- Earth -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
+                        alt="Earth">
+                    <h5>Earth</h5>
+                    <p>Our home — the only known planet to support life, with oceans, continents, and atmosphere.</p>
+                </div>
+            </div>
+    <br>
+            <!-- Mars -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars">
+                    <h5>Mars</h5>
+                    <p>The Red Planet, home to dusty landscapes, polar ice caps, and robotic exploration missions.</p>
+                </div>
+            </div>
+    
+            <!-- Jupiter -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Jupiter">
+                    <h5>Jupiter</h5>
+                    <p>The gas giant king with swirling storms, rings, and over 90 moons — including Ganymede.</p>
+                </div>
+            </div>
+    
+            <!-- Saturn -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn">
+                    <h5>Saturn</h5>
+                    <p>Famous for its rings, Saturn is a beautiful gas giant with moons like Titan and Enceladus.</p>
+                </div>
+            </div>
+    
+            <!-- Uranus -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Uranus">
+                    <h5>Uranus</h5>
+                    <p>A pale blue ice giant that spins on its side, giving it bizarre seasons and a faint ring system.</p>
+                </div>
+            </div>
+    
+            <!-- Neptune -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Neptune">
+                    <h5>Neptune</h5>
+                    <p>The windiest planet in the solar system, deep blue with a dark storm system and icy clouds.</p>
+                </div>
+            </div>
+    
+            <!-- Pluto -->
+            <div class="col">
+                <div class="planet-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg"
+                        alt="Pluto">
+                    <h5>Pluto</h5>
+                    <p>A dwarf planet in the Kuiper Belt, once the ninth planet. Known for its icy heart-shaped plain.</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="footer">
+        <p>© all rights reserverd by Navika Mandal.</p>
+    </div>
 </body>
 
 </html>

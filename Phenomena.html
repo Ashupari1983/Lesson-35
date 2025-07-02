@@ -11,13 +11,46 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
-        body {
+                
+                html {
+  overflow-y: scroll;
+}
+
+                body {
             background-color: #0a0f1a;
             color: white;
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family:'Red Hat Display', sans-serif;
         }
+        /* Reduce navbar height and spacing */
+            .navbar {
+             padding-top: 0.2rem;
+             padding-bottom: 0.2rem;
+        }
+
+/* Make brand (SpaceVerse) smaller if needed */
+            .navbar-brand {
+            font-size: 1.1rem !important;
+            padding: 0;
+        }
+
+/* Make nav tab names smaller and tighter */
+            .nav-link {
+            font-size: 0.7rem !important;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            font-weight: 400;
+        }
+
+            .navbar,
+            .navbar-brand,
+            .nav-link {
+            font-family: 'Red Hat Display', sans-serif;
+        }
+
 
         .navbar {
             background-color: #0a0f1a;
@@ -52,7 +85,42 @@
         .flip-horizontal {
             transform: scaleX(-1);
         }
-       
+        .footer{
+            background-color: #0a0f1a;
+            font-family: 'Red Hat Display';
+            text-align: center;
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 2px;
+            
+        }
+        .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .carousel-caption h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+    color: #ffffff;
+    font-family: 'Red Hat Display', sans-serif;
+  }
     </style>
 </head>
 
@@ -84,8 +152,97 @@
             </div>
         </div>
     </nav>
-Phenomena
+    <div id="phenomenaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+    
+            <!-- Slide 1: Black Holes -->
+            <div class="carousel-item active" style="background-image: url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701917258.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Black Holes</h1>
+                    <p>Formed from collapsed massive stars, black holes warp space and time, consuming anything — even light
+                        — that crosses their event horizon. They are some of the most mysterious and powerful objects in the
+                        universe.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 2: Supernovae -->
+            <div class="carousel-item" style="background-image: url('images/supernova.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Supernovae</h1>
+                    <p>Supernovae are the explosive deaths of massive stars, releasing vast amounts of energy and spreading
+                        heavy elements across the cosmos — essential for forming planets, life, and new stars.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 3: Auroras -->
+            <div class="carousel-item" style="background-image: url('images/aurora.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Auroras</h1>
+                    <p>These stunning light displays occur near Earth's poles when solar particles collide with atmospheric
+                        gases, producing glowing waves of green, purple, and red light in the sky.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 4: Eclipses -->
+            <div class="carousel-item" style="background-image: url('images/eclipse.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Eclipses</h1>
+                    <p>When one celestial body moves into the shadow of another, eclipses occur — like solar eclipses when
+                        the Moon covers the Sun, or lunar eclipses when Earth's shadow falls on the Moon.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 5: Nebulae -->
+            <div class="carousel-item" style="background-image: url('images/nebula.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Nebulae</h1>
+                    <p>Nebulae are giant clouds of gas and dust in space, often forming beautiful, glowing structures.
+                        They're the birthplaces of stars and one of the most colorful features of the galaxy.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 6: Pulsars -->
+            <div class="carousel-item" style="background-image: url('images/pulsar.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Pulsars</h1>
+                    <p>Pulsars are rapidly rotating neutron stars that emit beams of electromagnetic radiation. As they
+                        spin, these beams sweep across Earth like a cosmic lighthouse.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 7: Gravitational Waves -->
+            <div class="carousel-item" style="background-image: url('images/gravity-waves.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Gravitational Waves</h1>
+                    <p>Discovered in 2015, gravitational waves are ripples in space-time caused by massive objects like
+                        merging black holes or neutron stars. They confirm key predictions of Einstein’s relativity.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 8: Gamma Ray Bursts -->
+            <div class="carousel-item" style="background-image: url('images/gamma-ray.jpg');">
+                <div class="carousel-caption text-center">
+                    <h1>Gamma Ray Bursts</h1>
+                    <p>The brightest explosions in the universe, gamma-ray bursts release intense radiation for seconds or
+                        minutes. They’re thought to result from neutron star mergers or hypernovae.</p>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- Navigation Arrows -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#phenomenaCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#phenomenaCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="footer">
+        <p>© all rights reserverd by Navika Mandal.</p>
+    </div>
 </body>
 
 </html>
