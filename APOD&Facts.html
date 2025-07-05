@@ -93,6 +93,50 @@
             padding-bottom: 2px;
             
         }
+        #apod-description {
+  color: #e8e8e8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Red Hat Display', sans-serif;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Optional keyword highlights */
+#apod-description strong {
+  color: #9c9cff;
+  font-weight: 600;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  #apod-title {
+    font-size: 0.3rem;
+  }
+  #apod-description {
+    font-size: 0.2rem;
+  }
+}
+#nasa{
+    font-size: 20px;
+    text-align: center;
+}
+h2{
+    font-size: 40px;
+}
+
+
     </style>
 </head>
 
@@ -124,7 +168,63 @@
             </div>
         </div>
     </nav>
-APOD
+<!-- NASA APOD Section -->
+<section class="container my-5" id="apod-section">
+    <h2 id="nasa">NASA's</h2><h2 class="text-center text-light mb-4" style="font-family: 'Red Hat Display', sans-serif;">Astronomy Picture of the
+        Day</h2>
+
+    <div id="apod-content" class="text-center text-light p-4"
+        style="background-color: rgba(10,15,26,0.7); border-radius: 10px;">
+        <h3 id="apod-title" class="mb-3" style="font-weight: 500;"></h3>
+
+        <!-- APOD Image/Video -->
+        <div id="apod-media" class="mb-4">
+            <img id="apod-image" class="img-fluid rounded d-none" style="max-height: 500px;" />
+            <iframe id="apod-video" class="d-none rounded" style="width: 100%; max-width: 800px; height: 450px;"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <p id="apod-description" class="text"
+            style="max-width: 900px; margin: auto; font-size: 1rem; color: #ffffff; line-height: 1.6;"></p>
+    </div>
+</section>
+
+<!-- APOD Fetch Script -->
+<script>
+    const apiKey = "uhbVYt2JvZV8JdWACDRcDfs7b55z6JFDctn4k4VE";
+    const today = new Date().toISOString().split("T")[0];
+    const url = `https://api.nasa.gov/planetary/apod?api_key=uhbVYt2JvZV8JdWACDRcDfs7b55z6JFDctn4k4VE&date=${today}`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.getElementById("apod-title").textContent = data.title;
+            document.getElementById("apod-description").textContent = data.explanation;
+
+            if (data.media_type === "image") {
+                const img = document.getElementById("apod-image");
+                img.src = data.url;
+                img.alt = data.title;
+                img.classList.remove("d-none");
+            } else if (data.media_type === "video") {
+                const vid = document.getElementById("apod-video");
+                vid.src = data.url;
+                vid.classList.remove("d-none");
+            }
+        })
+        .catch(error => {
+            document.getElementById("apod-title").textContent = "Could not load APOD.";
+            document.getElementById("apod-description").textContent = "There was a problem fetching today's image or video.";
+            console.error("Error fetching APOD:", error);
+        });
+</script>
+  
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <div class="footer">

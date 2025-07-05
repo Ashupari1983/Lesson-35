@@ -118,17 +118,24 @@ body {
 
    
     .mission-section h2 {
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-     text-align: center; 
+      text-align: left; 
     }
-
+    .mission-section h1{
+        font-size:  40px;
+        text-align: center;
+    }
+    #road{
+        font-size: 25px;
+    }
     .mission-section p {
       color:white;
-      font-size: 0.6rem;
-      line-height: 1.6;
-      text-align: center;
+      font-size: 0.69rem;
+      line-height: 1.60.6;
+      text-align: left;
+      
     }
     .footer{
             background-color: #0a0f1a;
@@ -139,6 +146,34 @@ body {
             padding-bottom: 2px;
             
         }
+        .mission-image {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+#chand{
+    width: 70%;
+    height: 70%;
+}
+
+.mission-image:hover {
+  transform: scale(1.05);
+}
+
+.mission-row {
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .mission-image {
+    margin-top: 1rem;
+  }
+}
+
     </style>
 </head>
 
@@ -173,73 +208,186 @@ body {
     <div class="container py-5">
     
         <div class="mission-section">
-            <h2>Apollo 11</h2>
-            <p>
-                Apollo 11 was NASA’s historic 1969 mission that landed the first humans on the Moon.
-                Neil Armstrong and Buzz Aldrin walked the lunar surface while Michael Collins remained in orbit.
-                It marked a major achievement in human space exploration.
-            </p>
+            <h1 id="road">The Road to the Stars:</h1>
+            <h1>Missions That Made History </h1>
+            <br><br>
         </div>
     
-        <div class="mission-section">
-            <h2>Voyager 1</h2>
-            <p>
-                Launched in 1977, Voyager 1 explored Jupiter and Saturn before continuing into interstellar space.
-                It is now the farthest human-made object from Earth, still transmitting data after more than 45 years.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Apollo 11</h2>
+                    <p>
+                        Apollo 11 was a spaceflight conducted from July 16 to 24, 1969, by the United States and launched by
+                        NASA. It marked the
+                        first time that humans landed on the Moon. Commander Neil Armstrong and Lunar Module pilot Buzz
+                        Aldrin landed the Lunar
+                        Module Eagle on July 20, 1969, at 20:17 UTC, and Armstrong became the first person to step onto the
+                        Moon's surface six
+                        hours and 39 minutes later, on July 21 at 02:56 UTC. Aldrin joined him 19 minutes later, and they
+                        spent about two and a
+                        quarter hours together exploring the site they had named Tranquility Base upon landing. Armstrong
+                        and Aldrin collected
+                        47.5 pounds (21.5 kg) of lunar material to bring back to Earth as pilot Michael Collins flew the
+                        Command Module Columbia
+                        in lunar orbit, and were on the Moon's surface for 21 hours, 36 minutes, before lifting off to
+                        rejoin Columbia
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://www.nasa.gov/wp-content/uploads/2023/05/as11-40-5875large.jpg?w=1856" alt="Apollo 11" class="mission-image">
+                </div>
+            </div>
         </div>
     
-        <div class="mission-section">
-            <h2>Curiosity Rover</h2>
-            <p>
-                Curiosity landed on Mars in 2012 to study the planet’s surface, climate, and potential habitability.
-                It has been exploring Gale Crater and continues to make significant scientific discoveries.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Voyager 1</h2>
+                    <p>
+                        Voyager 1 has been exploring our solar system since 1977. The probe is now in interstellar space,
+                        the region outside the
+                        heliopause, or the bubble of energetic particles and magnetic fields from the Sun. Voyager 1 was
+                        launched after Voyager
+                        2, but because of a faster route it exited the asteroid belt earlier than its twin, and it overtook
+                        Voyager 2 on Dec.
+                        15, 1977.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://cdn.zmescience.com/wp-content/uploads/2017/09/Voyager_spacecraft.jpg" alt="Voyager 1" class="mission-image">
+                </div>
+            </div>
         </div>
     
-        <div class="mission-section">
-            <h2>Rosetta</h2>
-            <p>
-                ESA’s Rosetta mission was launched in 2004 and became the first spacecraft to orbit and land on a comet —
-                67P/Churyumov–Gerasimenko.
-                It provided critical insights into the early solar system.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Curiosity Rover</h2>
+                    <p>
+                        Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's
+                        Mars Science
+                        Laboratory (MSL) mission. It was launched from Cape Canaveral on November 26, 2011, and landed on
+                        Aeolis Palus inside
+                        Gale crater on Mars on August 6, 2012. Curiosity is the largest robot to ever land on another planet
+                        and is equipped
+                        with 17 cameras and a robotic arm containing a suite of specialized laboratory-like tools and
+                        instruments. Its mission
+                        is to determine whether the Red Planet ever was habitable to microbial life.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://cff2.earth.com/uploads/2023/09/19073809/Mars-Curiosity-Rover-scaled.jpg" alt="Curiosity Rover" class="mission-image">
+                </div>
+            </div>
         </div>
     
-        <div class="mission-section">
-            <h2>Chandrayaan-3</h2>
-            <p>
-                In 2023, ISRO’s Chandrayaan-3 successfully landed near the Moon’s south pole.
-                It marked India’s first successful soft landing and expanded global lunar exploration capabilities.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Rosetta</h2>
+                    <p>
+                        Rosetta was a space probe built by the European Space Agency. It was launched on March 2, 2004, and
+                        consisted of an
+                        orbiter and a lander called Philae. Rosetta was the first mission ever to orbit a comet’s nucleus
+                        and land a probe on
+                        its surface. It studied the Jupiter-family comet 67P/Churyumov-Gerasimenko for two years as it
+                        orbited around our Sun.
+                        The spacecraft performed flybys of Earth, Mars, and the asteroids 21 Lutetia and 2867 Šteins during
+                        its journey to the
+                        comet.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/11/rosetta_at_comet/15031338-1-eng-GB/Rosetta_at_Comet_pillars.jpg" alt="Rosetta" class="mission-image">
+                </div>
+            </div>
         </div>
     
-        <div class="mission-section">
-            <h2>Tianwen-1</h2>
-            <p>
-                Tianwen-1, launched by CNSA in 2020, included an orbiter, lander, and rover — Zhurong.
-                It made China the second country to operate a rover on Mars.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Chandrayaan-3</h2>
+                    <p>
+                        Chandrayaan-3 is the third mission in the Chandrayaan programme, a series of
+                        lunar-exploration missions developed by the Indian Space Research Organisation (ISRO). The mission
+                        consists of a Vikram lunar lander and a Pragyan lunar rover, as replacements for the equivalents on
+                        Chandrayaan-2, which had crashed on landing in 2019. The spacecraft was launched on July 14, 2023,
+                        at 14:35 IST from the Satish Dhawan Space Centre (SDSC) in Sriharikota,
+                        India. It entered lunar orbit on 5 August, and touched down near the lunar south pole, at 69°S, on
+                        23 August 2023 at
+                        18:04 IST (12:33 UTC). With this landing, ISRO became the fourth national space agency to
+                        successfully land on the Moon,
+                        after the Soviet space program, NASA and CNSA, and the first national space agency to achieve a soft
+                        landing near the
+                        lunar south pole.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img id="chand" src="https://www.oneindia.com/ph-big/2023/07/chandrayaan-3-completes-flawless-24-hour-rehearsal-all-set-for-friday-s-launch_168914701160.jpg" alt="Chandrayaan-3" class="mission-image">
+                </div>
+            </div>
         </div>
     
-        <div class="mission-section">
-            <h2>James Webb Space Telescope</h2>
-            <p>
-                Launched in 2021, JWST is the most advanced space telescope to date.
-                It observes the universe in infrared, revealing early galaxies, exoplanets, and cosmic phenomena.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Tianwen-1</h2>
+                    <p>
+                        Tianwen-1, launched by CNSA in 2020, included an orbiter, lander, and rover — Zhurong.
+                        It made China the second country to operate a rover on Mars.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://images.newscientist.com/wp-content/uploads/2021/02/10114122/10-feb_tianwen-1.jpg" alt="Tianwen-1" class="mission-image">
+                </div>
+            </div>
         </div>
     
-        <div class="mission-section">
-            <h2>Sputnik 1</h2>
-            <p>
-                Sputnik 1, launched by the Soviet Union in 1957, was the first artificial satellite.
-                It began the space age and triggered the space race between the US and USSR.
-            </p>
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>James Webb Space Telescope</h2>
+                    <p>
+                        Tianwen-1 is China's first independent interplanetary mission. The probe, a combination orbiter,
+                        lander and rover,
+                        launched from Earth aboard a Long March 5 rocket on July 23, 2020 in the midst of the COVID-19
+                        pandemic.
+                        Having traveled 292 million miles (470 million kilometers) from Earth, Tianwen-1 successfully
+                        entered orbit around the
+                        Red Planet in Feb. of 2021.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/otis-to-iis-1-1643131013.jpeg?crop=0.6542424242424243xw:1xh;center,top&resize=640:*" alt="James Webb Space Telescope" class="mission-image">
+                </div>
+            </div>
+        </div>
+    
+        <div class="container mission-section">
+            <div class="row mission-row">
+                <div class="col-md-8">
+                    <h2>Sputnik 1</h2>
+                    <p>
+                        History changed on October 4, 1957, when the Soviet Union successfully launched Sputnik I. The
+                        world's first artificial
+                        satellite was about the size of a beach ball (58 cm.or 22.8 inches in diameter), weighed only 83.6
+                        kg. or 183.9 pounds,
+                        and took about 98 minutes to orbit the Earth on its elliptical path. That launch ushered in new
+                        political, military,
+                        technological, and scientific developments. While the Sputnik launch was a single event, it marked
+                        the start of the
+                        space age and the U.S.-U.S.S.R space race.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.I1NGF8lUaerziVPamK-Q3AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sputnik 1" class="mission-image">
+                </div>
+            </div>
         </div>
     
     </div>
-    
+      
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <div class="footer">
